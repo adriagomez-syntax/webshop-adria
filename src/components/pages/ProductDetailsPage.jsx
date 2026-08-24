@@ -8,9 +8,13 @@ import ButtonFilled from "../common/ButtonFilled"
 import products from "../../assets/data/products.json" with { type: "json" }
 import categoryName from "../../assets/data/categoryName.json" with { type: "json" }
 import { FaArrowLeft, FaCartPlus, FaStar } from "react-icons/fa";
+import Input from "../common/Input";
+import { useState } from "react";
 
 export default function ProductDetailsPage() {
 	
+	const [ quantity, setQuantity ] = useState(1);
+
 	const { id } = useParams();
 	const product = products.find(product => product.id === id);
 	if (typeof product === "undefined")
@@ -18,8 +22,23 @@ export default function ProductDetailsPage() {
 		return <Error404Page />;
 	}
 
-	function AddToCart() {
-		console.log(`${product.name} zum Warenkorb hinzugefügt`);
+	function addToCart() {
+		console.log(`${quantity}x ${product.name} zum Warenkorb hinzugefügt`);
+	}
+
+	function increment() {
+		
+		if (quantity < product.stock)
+		{
+			setQuantity(quantity + 1);
+		}
+	}
+
+	function decrement() {
+		if (quantity > 1)
+		{
+			setQuantity(quantity - 1);
+		}
 	}
 	
 	return (
@@ -38,6 +57,15 @@ export default function ProductDetailsPage() {
 					<FaStar />
 				</p>
 			</div>
+			<div className="flex gap-4 items-center">
+				<p>Menge:</p>
+				<div className="flex gap-2">
+					<ButtonFilled onClick={decrement}>-</ButtonFilled>
+					<Input type="number" min="1" max={ product.stock } value={ quantity }  className="w-fit"
+						onChange={event => setQuantity(event.target.value)} />
+					<ButtonFilled onClick={increment}>+</ButtonFilled>
+				</div>
+			</div>
 			<div className="flex gap-4">
 				<Link to="/shop" className="flex">
 					<ButtonOutline className="flex gap-2 items-center">
@@ -45,7 +73,7 @@ export default function ProductDetailsPage() {
 						{"Zurück"}
 					</ButtonOutline>
 				</Link>
-				<ButtonFilled onClick={AddToCart} className="flex gap-2 items-center">
+				<ButtonFilled onClick={addToCart} className="flex gap-2 items-center">
 					<FaCartPlus />
 					{"In den Warenkorb"}
 				</ButtonFilled>
