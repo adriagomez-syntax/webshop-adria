@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Navbar from "./navbar/Navbar";
-import User from "./User";
+import User from "./user/User";
 
 export default function Header() {
 	return (

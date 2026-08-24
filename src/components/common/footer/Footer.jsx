@@ -1,10 +1,11 @@
-import MediaFooter from "./MediaFooter";
+import BottomFooter from "./bottom/BottomFooter";
+import MainFooter from "./main/mainFooter";
 
 export default function Footer() {
 	return (
-		<footer className="flex justify-between items-center px-4 border-t-1 border-text/20">
-			<p className="text-xs">© 2026 PixelVault GmbH. Alle Rechte vorbehalten.</p>
-			<MediaFooter />
+		<footer className="flex flex-col mt-4 border-t border-text/20">
+			<MainFooter />
+			<BottomFooter />
 		</footer>
 	)
 }

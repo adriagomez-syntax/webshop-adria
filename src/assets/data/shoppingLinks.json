@@ -1,0 +1,23 @@
+[
+	{
+		"id": "console",
+		"name": "Konsolen",
+		"path": "#"
+	},
+	{
+		"id": "game",
+		"name": "Spielen",
+		"path": "#"
+	},
+	{
+		"id": "accesories",
+		"name": "Zubehör",
+		"path": "#"
+	},
+	{
+		"id": "offers",
+		"name": "Angebote",
+		"path": "#",
+		"className": "text-accent-1"
+	}
+]

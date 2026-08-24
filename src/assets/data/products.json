@@ -1,0 +1,83 @@
+[
+	{
+		"id": "pokemon-gelbe",
+		"name": "Pokemon Gelbe Edition",
+		"description": "Das Spiel ist eine geänderte Version der vorherigen Titel Rote und Blaue Edition und zeigt Pikachu auf seiner Verpackung.",
+		"price": 199.99,
+		"category": "game-boy",
+		"stock": 2,
+		"img": "/images/pokemon-gelbe.jpg"
+	},
+	{
+		"id": "super-mario-kart",
+		"name": "Super Mario Kart",
+		"description": "Rasanter SNES-Klassiker: Mario & Co. rasen über bunte Strecken, nutzen Items und liefern sich chaotische Mehrspieler-Rennen.",
+		"price": 89.99,
+		"category": "snes",
+		"stock": 25,
+		"img": "/images/super-mario-kart.jpg"
+	},
+	{
+		"id": "fire-emblem-path-radiance",
+		"name": "Fire Emblem Path of Radiance",
+		"description": "Taktisches RPG für GameCube: Führe Ike und seine Truppe in rundenbasierten Kämpfen durch eine epische Fantasy-Geschichte.",
+		"price": 269.99,
+		"category": "game-cube",
+		"stock": 0,
+		"img": "/images/fire-emblem-path-radiance.jpg"
+	},
+	{
+		"id": "pikmin",
+		"name": "Pikmin",
+		"description": "Originelles Strategie-Abenteuer: Steuere Captain Olimar und seine Pikmin, löse Rätsel und erkunde eine fremde, lebendige Welt.",
+		"price": 32.99,
+		"category": "game-cube",
+		"stock": 50,
+		"img": "/images/pikmin.jpg"
+	},
+	{
+		"id": "super-mario-land",
+		"name": "Super Mario Land",
+		"description": "Klassisches Jump’n’Run: Mario reist durch Sarasaland, besiegt Gegner und rettet Prinzessin Daisy in kompakten Levels.",
+		"price": 179.99,
+		"category": "game-boy",
+		"stock": 37,
+		"img": "/images/super-mario-land.jpg"
+	},
+	{
+		"id": "harvest-moon-wonderful-life",
+		"name": "Harvest Moon: A Wonderful Life",
+		"description": "Entspannendes Farmsim-Spiel: Baue deinen Hof auf, pflege Tiere und erlebe das Dorfleben im Laufe der Jahreszeiten.",
+		"price": 38.99,
+		"category": "game-cube",
+		"stock": 42,
+		"img": "/images/harvest-moon-wonderful-life.jpg"
+	},
+	{
+		"id": "street-fighter-ii",
+		"name": "Street Fighter II",
+		"description": "Legendäres Kampfspiel: Wähle Kämpfer, meistere Spezialmoves und besiege Rivalen in schnellen, taktischen Duellen.",
+		"price": 99.99,
+		"category": "snes",
+		"stock": 29,
+		"img": "/images/street-fighter-ii.jpg"
+	},
+	{
+		"id": "illusion-time",
+		"name": "Illusion of Time",
+		"description": "Atmosphärisches Action-RPG: Reise mit Will durch eine geheimnisvolle Welt, löse Rätsel und bekämpfe dunkle Mächte.",
+		"price": 169.99,
+		"category": "snes",
+		"stock": 1,
+		"img": "/images/illusion-time.jpg"
+	},
+	{
+		"id": "tetris",
+		"name": "Tetris",
+		"description": "Süchtig machendes Puzzlespiel: Ordne fallende Blöcke geschickt an, vervollständige Reihen und steigere dein Tempo.",
+		"price": 159.99,
+		"category": "game-boy",
+		"stock": 101,
+		"img": "/images/tetris.jpg"
+	}
+]

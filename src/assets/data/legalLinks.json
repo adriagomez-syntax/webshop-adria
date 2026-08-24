@@ -1,0 +1,22 @@
+[
+	{
+		"id": "legal",
+		"name": "Impressum",
+		"path": "#"
+	},
+	{
+		"id": "data-protection",
+		"name": "Datenschutz",
+		"path": "#"
+	},
+	{
+		"id": "terms",
+		"name": "AGB",
+		"path": "#"
+	},
+	{
+		"id": "cookies",
+		"name": "Cookie-Einstellungen",
+		"path": "#"
+	}
+]

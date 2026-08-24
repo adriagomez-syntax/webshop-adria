@@ -3,7 +3,7 @@ import Selector from "../../Selector";
 
 export default function NavbarLink({ name, path }) {
 	return (
-		<NavLink to={ path } className="text-black">
+		<NavLink to={ path }>
 			<Selector>
 				<li className="">
 					{ name }

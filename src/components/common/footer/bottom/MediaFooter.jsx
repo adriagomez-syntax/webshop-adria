@@ -1,4 +1,4 @@
-import { media } from "../../../assets/data/mediaLinks"
+import { media } from "../../../../assets/data/mediaLinks"
 import MediaFooterLink from "./MediaFooterLink"
 
 export default function MediaFooter() {

@@ -1,0 +1,22 @@
+[
+	{
+		"id": "faq",
+		"name": "FAQ / Hilfe",
+		"path": "#"
+	},
+	{
+		"id": "delivery",
+		"name": "Versandinfos",
+		"path": "#"
+	},
+	{
+		"id": "refund",
+		"name": "Rückgabe",
+		"path": "#"
+	},
+	{
+		"id": "contact",
+		"name": "Kontakt",
+		"path": "#"
+	}
+]
