@@ -1,13 +1,14 @@
-import products from "../../assets/data/products.json" with { type: "json" }
-import ProductCard from "./ProductCard"
 import Section from "../common/Section"
+import ProductList from "./list/ProductList"
 
 export default function ProductSection() {
 	return (
-		<Section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-			{products.map(product => (
-				<ProductCard key={ product.id } {...product} />
-			))}
+		<Section className="flex flex-col gap-4">
+			<p>Order</p>
+			<div className="flex flex-col md:flex-row justify-between gap-4">
+				<p>Filter</p>
+				<ProductList />
+			</div>
 		</Section>
 	)
 }
