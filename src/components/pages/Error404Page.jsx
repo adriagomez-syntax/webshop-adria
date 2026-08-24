@@ -7,7 +7,7 @@ export default function Error404Page() {
 	const location = useLocation();
 	
 	return (
-		<Main className="flex flex-col gap-4 items-center justify-center">
+		<Main className="flex flex-col gap-4 items-center justify-center min-h-[50vh]">
 			<TitelHighlight>Error 404</TitelHighlight>
 			<p>{"Page "}
 				<span className="text-accent-2">{ location.pathname }</span>

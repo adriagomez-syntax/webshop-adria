@@ -6,7 +6,7 @@ export default function InfoFooter() {
 			<TitelHighlight className="text-lg text-text">{"Pixel"}
 				<span className="text-secondary">Vault</span>
 			</TitelHighlight>
-			<p className="text-wrap text-xs">PixelVault GmbH — Deine Zeitmaschine von die 80er bis heute. Wir teilen deine Leidenschaft für klassische Videospiele und bieten ein lückenlos geprüftes Sammler-Erlebnis.</p>
+			<p className="text-wrap">PixelVault GmbH — Deine Zeitmaschine von die 80er bis heute. Wir teilen deine Leidenschaft für klassische Videospiele und bieten ein lückenlos geprüftes Sammler-Erlebnis.</p>
 		</div>
 	)
 }
