@@ -1,5 +1,5 @@
 import BottomFooter from "./bottom/BottomFooter";
-import MainFooter from "./main/mainFooter";
+import MainFooter from "./main/MainFooter";
 
 export default function Footer() {
 	return (
