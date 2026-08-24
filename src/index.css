@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #BAFF00;
+  --color-secondary: #00E5FF;
+  --color-text: #F5F7FA;
+  --color-accent-1: #FF6C00;
+  --color-accent-2: #B300FF;
+  --color-accent-3: #399FAA;
+  --color-background: #0B0F1A;
+  --color-background-mid: #11182A;
+  --color-background-card: #18233A;
+  --color-background-dark: #070A12;
+
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Orbitron';
+}
