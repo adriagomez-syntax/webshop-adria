@@ -1,11 +1,14 @@
+import { Link } from "react-router";
 import Button from "../../Button";
 
-export default function UserButton({ func, icon}) {
+export default function UserButton({ path, icon}) {
 	const Icon = icon;
 
 	return (
-		<Button onClick={ func } className="hover:text-accent-3">
-			<Icon />
-		</Button>
+		<Link to={ path }>
+			<Button className="hover:text-accent-3">
+				<Icon />
+			</Button>
+		</Link>
 	)
 }

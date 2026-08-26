@@ -1,10 +1,17 @@
 [
 	{
 		"name": "Home",
-		"path": "/"
+		"path": "/",
+		"isNav": true
 	},
 	{
 		"name": "Shop",
-		"path": "/shop"
+		"path": "/product",
+		"isNav": true
+	},
+	{
+		"name": "Checkout",
+		"path": "/kasse",
+		"isNav": false
 	}
 ]

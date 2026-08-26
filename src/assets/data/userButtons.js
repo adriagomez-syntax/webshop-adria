@@ -4,11 +4,11 @@ export const userButtons = [
 	{
 		id: "profile",
 		icon: FaUser,
-		func: null
+		path: "#"
 	},
 	{
 		id: "cart",
 		icon: FaShoppingCart,
-		func: null
+		path: "/kasse"
 	},
 ]

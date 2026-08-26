@@ -5,6 +5,7 @@ import HomePage from "./components/pages/HomePage"
 import ShopPage from "./components/pages/ShopPage"
 import Error404Page from "./components/pages/Error404Page"
 import ProductDetailsPage from "./components/pages/ProductDetailsPage"
+import CheckoutPage from "./components/pages/CheckouPage"
 
 export default function App() {
 	return (
@@ -12,8 +13,9 @@ export default function App() {
 			<Header />
 			<Routes>
 				<Route path="" element={ <HomePage /> } />
-				<Route path="/shop" element={ <ShopPage /> } />
+				<Route path="/product" element={ <ShopPage /> } />
 				<Route path="/product/:id" element={ <ProductDetailsPage /> } />
+				<Route path="/kasse" element={ <CheckoutPage /> } />
 
 				<Route path="/*" element={ <Error404Page /> } />
 			</Routes>
