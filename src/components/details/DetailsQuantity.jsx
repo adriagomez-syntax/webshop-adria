@@ -24,7 +24,7 @@ export default function DetailsQuantity({ quantity, setQuantity, stock }) {
 			<p>Menge:</p>
 			<div className="flex gap-2">
 				<ButtonFilled onClick={decrement} size={ButtonLittle}>-</ButtonFilled>
-				<Input type="number" min="1" max={ stock } value={ quantity } className="w-fit"
+				<Input type="number" min="1" max={ stock } value={ quantity } className="w-fit text-center"
 					onChange={event => setQuantity(event.target.value)} />
 				<ButtonFilled onClick={increment} size={ButtonLittle}>+</ButtonFilled>
 			</div>

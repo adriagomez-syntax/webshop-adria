@@ -21,6 +21,12 @@ export default function DetailsHero({ img, name, category, description, price, r
 					<FaStar />
 				</p>
 			</div>
+			<div>
+				<p>
+					<span className="font-secondary tracking-widest text-accent-1">{stock}</span>
+					{" auf Lager"}
+				</p>
+			</div>
 		</div>
 	)
 }
