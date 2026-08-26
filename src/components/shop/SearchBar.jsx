@@ -1,7 +1,7 @@
 import { FaSearch } from "react-icons/fa"
 import Input from "../common/Input"
 
-export default function ProductSearch({ searchValue, setSearch }) {
+export default function SearchBar({ searchValue, setSearch }) {
 	
 	
 	return (

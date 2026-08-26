@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Section from "../common/Section"
 import ProductList from "./list/ProductList"
-import ProductSearch from "./ProductSearch"
+import SearchBar from "./SearchBar"
 
 export default function ProductSection() {
 	
@@ -9,7 +9,7 @@ export default function ProductSection() {
 
 	return (
 		<Section className="flex flex-col gap-4">
-			<ProductSearch searchValue={ searchValue } setSearch={ setSearch } />
+			<SearchBar searchValue={ searchValue } setSearch={ setSearch } />
 			<p>Order</p>
 			<div className="flex flex-col md:flex-row justify-between gap-4">
 				<p>Filter</p>
