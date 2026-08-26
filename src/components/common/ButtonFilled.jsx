@@ -1,9 +1,16 @@
-import Button from "./Button";
+import ButtonBig from "./ButtonBig";
 
-export default function ButtonFilled({ type = "button", onClick = null, className = "", color = "bg-accent-2", children }) {
+export default function ButtonFilled({ type = "button", onClick = null, className = "", color = "bg-accent-2", size = DefaultComponent, children }) {
+	
+	const Size = size;
+	
 	return (
-		<Button type={ type } onClick={ onClick } className={ className + " " + color + " p-4 rounded-md"}>
+		<Size type={ type } onClick={ onClick } className={ className + " " + color + " p-4 rounded-md"}>
 			{ children }
-		</Button>
+		</Size>
 	)
+}
+
+function DefaultComponent(props) {
+	return ( <ButtonBig {...props} /> )
 }

@@ -1,9 +1,16 @@
-import Button from "./Button"
+import ButtonBig from "./ButtonBig";
 
-export default function ButtonOutline({ type = "button", onClick = null, className = "", color = "border-accent-2/20", children }) {
+export default function ButtonOutline({ type = "button", onClick = null, className = "", color = "border-accent-2/20", size = DefaultComponent, children }) {
+	
+	const Size = size;
+
 	return (
-		<Button type = { type } onClick={ onClick } className={ className + " " + color + " py-2 px-4 border rounded-md" }>
+		<Size type = { type } onClick={ onClick } className={ className + " " + color + " border rounded-md"} >
 			{ children }
-		</Button>
-	)
+		</Size>
+	)	
+}
+
+function DefaultComponent(props) {
+	return (<ButtonBig {...props} />)
 }
