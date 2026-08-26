@@ -15,7 +15,7 @@ export default function ProductDetailsPage() {
 	const product = products.find(product => product.id === id);
 	if (typeof product === "undefined")
 	{
-		return <Error404Page />;
+		return <Error404Page returnPath={ "/product" } />;
 	}
 
 	function addToCart() {
