@@ -6,7 +6,7 @@ import { FaArrowLeft, FaCartPlus } from "react-icons/fa";
 export default function DetailsButtons({ addToCart }) {
 	return (
 		<div className="flex gap-4">
-			<Link to="/shop" className="flex">
+			<Link to="/product" className="flex">
 				<ButtonOutline className="flex gap-2 items-center">
 					<FaArrowLeft />
 					{"Zurück"}

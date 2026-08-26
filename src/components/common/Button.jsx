@@ -1,6 +1,6 @@
-export default function Button({ type = "button", onClick = null, className = "", children }) {
+export default function Button({ type = "button", onClick = null, disabled = false, className = "", children }) {
 	return (
-		<button type={ type } onClick={ onClick } className={ className + " cursor-pointer hover:opacity-75 active:scale-95 transition" } >
+		<button type={ type } onClick={ onClick } disabled={ disabled } className={ className + " cursor-pointer hover:not-disabled:opacity-75 active:not-disabled:scale-95 transition disabled:cursor-not-allowed disabled:opacity-40" } >
 			{ children }
 		</button>
 	)

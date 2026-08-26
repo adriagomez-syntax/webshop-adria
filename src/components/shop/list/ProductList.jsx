@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCard"
+import ProductCard from "./product/ProductCard"
 import ProductListPagination from "./ProductListPagination"
 import products from "../../../assets/data/products.json" with { type: "json" }
 import categoryName from "../../../assets/data/categoryName.json" with { type: "json" }
