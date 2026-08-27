@@ -1,7 +1,7 @@
 import { FaSearch } from "react-icons/fa"
 import Input from "../common/Input"
 import { FaX } from "react-icons/fa6";
-import Button from "../common/Button";
+import Button from "../common/button/Button";
 
 export default function SearchBar({ searchValue, setSearch }) {
 

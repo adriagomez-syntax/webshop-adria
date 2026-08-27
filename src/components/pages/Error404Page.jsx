@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import Main from "../common/Main";
 import TitelHighlight from "../common/TitleHighlight";
-import ButtonFilled from "../common/ButtonFilled";
+import ButtonFilled from "../common/button/ButtonFilled";
 import { FaArrowLeft } from "react-icons/fa";
 
 export default function Error404Page({ returnPath = null }) {

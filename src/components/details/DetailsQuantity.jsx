@@ -1,5 +1,5 @@
-import ButtonFilled from "../common/ButtonFilled";
-import ButtonLittle from "../common/ButtonLittle";
+import ButtonFilled from "../common/button/ButtonFilled";
+import ButtonLittle from "../common/button/ButtonLittle";
 import Input from "../common/Input";
 
 export default function DetailsQuantity({ quantity, setQuantity, stock }) {

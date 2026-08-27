@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import Section from "../common/Section";
-import ButtonFilled from "../common/ButtonFilled";
+import ButtonFilled from "../common/button/ButtonFilled";
 import CheckoutInput from "./CheckoutInput";
 
 export default function CheckoutSection() {

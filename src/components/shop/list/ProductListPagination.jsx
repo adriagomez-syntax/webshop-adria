@@ -1,5 +1,5 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import ButtonOutline from "../../common/ButtonOutline";
+import ButtonOutline from "../../common/button/ButtonOutline";
 
 export default function ProductListPagination() {
 	return (

@@ -1,5 +1,5 @@
-import ButtonFilled from "../common/ButtonFilled";
-import ButtonOutline from "../common/ButtonOutline";
+import ButtonFilled from "../common/button/ButtonFilled";
+import ButtonOutline from "../common/button/ButtonOutline";
 import { Link } from "react-router";
 import { FaArrowLeft, FaCartPlus } from "react-icons/fa";
 

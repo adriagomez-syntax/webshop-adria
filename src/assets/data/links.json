@@ -10,6 +10,11 @@
 		"isNav": true
 	},
 	{
+		"name": "Über uns",
+		"path": "/about",
+		"isNav": true
+	},
+	{
 		"name": "Checkout",
 		"path": "/kasse",
 		"isNav": false
