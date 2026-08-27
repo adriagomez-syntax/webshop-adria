@@ -28,8 +28,8 @@ export default function SidebarPrice({ maxPrice, minPrice, setMaxPrice, setMinPr
 	return (
 		<SidebarInputGroup label="Preisbereich" className="text-secondary">
 			<div className="relative">
-				<div className="absolute mt-1 w-full h-1 bg-background-mid rounded" />
-				<div className="absolute mt-1 w-full h-1 bg-secondary rounded" style={{
+				<div className="absolute mt-1 md:mt-2 w-full h-1 bg-background-mid rounded" />
+				<div className="absolute mt-1 md:mt-2 w-full h-1 bg-secondary rounded" style={{
 					left: `${minPercent}%`,
 					width: `${maxPercent - minPercent}%`
 				}} />
@@ -40,7 +40,15 @@ export default function SidebarPrice({ maxPrice, minPrice, setMaxPrice, setMinPr
 					[&::-webkit-slider-thumb]:h-4 
 					[&::-webkit-slider-thumb]:w-4 
 					[&::-webkit-slider-thumb]:bg-secondary 
-					[&::-webkit-slider-thumb]:rounded-full"
+					[&::-webkit-slider-thumb]:rounded-full
+					[&::-moz-range-thumb]:pointer-events-auto
+
+					[&::-moz-range-thumb]:appearance-none
+					[&::-moz-range-thumb]:h-4
+					[&::-moz-range-thumb]:w-4
+					[&::-moz-range-thumb]:bg-secondary
+					[&::-moz-range-thumb]:border-none
+					[&::-moz-range-thumb]:rounded-full"
 				/>
 				<input type="range" min="0" max="1000" value={ maxPrice } onChange={ handleMaxPrice } 
 					className="absolute w-full pointer-events-none appearance-none bg-transparent 
@@ -49,7 +57,15 @@ export default function SidebarPrice({ maxPrice, minPrice, setMaxPrice, setMinPr
 					[&::-webkit-slider-thumb]:h-4 
 					[&::-webkit-slider-thumb]:w-4 
 					[&::-webkit-slider-thumb]:bg-secondary 
-					[&::-webkit-slider-thumb]:rounded-full"
+					[&::-webkit-slider-thumb]:rounded-full
+					
+					[&::-moz-range-thumb]:pointer-events-auto
+					[&::-moz-range-thumb]:appearance-none
+					[&::-moz-range-thumb]:h-4
+					[&::-moz-range-thumb]:w-4
+					[&::-moz-range-thumb]:bg-secondary
+					[&::-moz-range-thumb]:border-none
+					[&::-moz-range-thumb]:rounded-full"
 				/>
 			</div>
 			<div className="flex justify-between gap-4 mt-4">

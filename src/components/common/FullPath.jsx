@@ -7,7 +7,7 @@ export default function FullPath() {
 	const path = location.pathname.split("/").filter(Boolean)
 	
 	return (
-		<div className="flex gap-1 text-2xs">
+		<div className="flex gap-1 text-2xs md:text-sm">
 			<Link to="/" className="hover:underline">
 				PixelVault
 			</Link>
