@@ -6,7 +6,7 @@ export default function UserButton({ path, icon}) {
 
 	return (
 		<Link to={ path }>
-			<Button className="hover:text-accent-3">
+			<Button className="hover:text-accent-3 text-text">
 				<Icon />
 			</Button>
 		</Link>

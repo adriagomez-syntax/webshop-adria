@@ -1,6 +1,6 @@
-export default function TitelHighlight({ className = "", color = "text-primary", children }) {
+export default function TitelHighlight({ className = "", color = "text-text", children }) {
 	return (
-		<h1 className={ className + " " + color +" font-secondary text-4xl font-bold tracking-widest uppercase" }>
+		<h1 className={ className + " " + color +" font-secondary text-3xl font-bold tracking-widest uppercase" }>
 			{ children }
 		</h1>
 	)

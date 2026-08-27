@@ -1,5 +1,5 @@
-import CategoryLabel from "../../../common/CategoryLabel";
-import categoryName from "../../../../assets/data/categoryName.json" with { type: "json" }
+import CategoryLabel from "../../common/CategoryLabel";
+import categoryName from "../../../assets/data/categoryName.json" with { type: "json" }
 import { FaStar } from "react-icons/fa";
 
 export default function ProductCategoryRating({ category, rating, disabled }) {

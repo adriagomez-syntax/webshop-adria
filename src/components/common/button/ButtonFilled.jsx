@@ -1,6 +1,6 @@
 import ButtonBig from "./ButtonBig";
 
-export default function ButtonFilled({ type = "button", onClick = null, disabled = false, className = "", color = "bg-accent-2", size = DefaultComponent, children }) {
+export default function ButtonFilled({ type = "button", onClick = null, disabled = false, className = "", color = "bg-accent-2 text-text", size = DefaultComponent, children }) {
 	
 	const Size = size;
 	
