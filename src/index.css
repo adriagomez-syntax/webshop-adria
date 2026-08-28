@@ -16,9 +16,6 @@
 
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Orbitron';
-}
 
-.text-2xs {
-  font-size: 0.5rem /* 0.75rem = 12px */;
-  line-height: var(--tw-leading, 2 /* calc(1 / 0.75) ≈ 1.333333 */);
+  --text-2xs: 0.5rem;
 }
