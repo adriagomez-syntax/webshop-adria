@@ -46,7 +46,7 @@ export default function ShopPage() {
 	})
 
 	const orderedList = filteredList.sort(sortList.find(func => func.id === sortFunc)?.func)
-	
+
 	return (
 		<Main className="flex flex-col gap-4">
 			<ShopHeroSection resultNum={ orderedList.length } />
