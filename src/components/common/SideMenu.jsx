@@ -30,7 +30,7 @@ export default function SideMenu({ open, setOpen, side = "left", className = "",
 	return (
 		<div className={(open ? "visible opacity-100" : "invisible opacity-0") + " fixed inset-0 z-100 transition"}>
 			<div className="absolute inset-0 bg-black/30" onClick={ () => setOpen(false) } />
-			<div className={`${open ? translateShow : translateHidden} ${sideClass} absolute p-6 flex flex-col gap-4 transform transition-transform ease-in-out duration-300 bg-background-card`}>
+			<div className={`${open ? translateShow : translateHidden} ${sideClass} absolute p-6 flex flex-col gap-4 transform transition-transform ease-in-out duration-300 bg-background-mid`}>
 				<div className={`${className} flex flex-col gap-6 h-full`}>
 					{ children }
 				</div>
