@@ -7,7 +7,7 @@ export default function ProductCategoryRating({ category, rating, disabled }) {
 		<div className="flex justify-between items-center">
 			{/** When clicked filter by category | check category exist */}
 			<CategoryLabel disabled={ disabled }>{ categoryName[category] }</CategoryLabel>
-			<p className={(!disabled && "text-accent-1") + " flex font-secondary gap-2 items-center"}>
+			<p className={(!disabled && "text-primary") + " flex font-secondary gap-2 items-center"}>
 				<FaStar />
 				{ rating.toLocaleString("de-De") }
 			</p>

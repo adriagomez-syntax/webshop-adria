@@ -8,6 +8,7 @@
 		"category": "game-boy",
 		"stock": 2,
 		"rating": 4.6,
+		"reviews": 109,
 		"img": "/images/pokemon-gelbe.jpg"
 	},
 	{
@@ -19,6 +20,7 @@
 		"category": "snes",
 		"stock": 25,
 		"rating": 4.3,
+		"reviews": 22,
 		"img": "/images/super-mario-kart.jpg"
 	},
 	{
@@ -30,6 +32,7 @@
 		"category": "game-cube",
 		"stock": 0,
 		"rating": 4.8,
+		"reviews": 15,
 		"img": "/images/fire-emblem-path-radiance.jpg"
 	},
 	{
@@ -41,6 +44,7 @@
 		"category": "game-cube",
 		"stock": 50,
 		"rating": 4,
+		"reviews": 8,
 		"img": "/images/pikmin.jpg"
 	},
 	{
@@ -52,6 +56,7 @@
 		"category": "game-boy",
 		"stock": 37,
 		"rating": 4.2,
+		"reviews": 12,
 		"img": "/images/super-mario-land.jpg"
 	},
 	{
@@ -63,6 +68,7 @@
 		"category": "game-cube",
 		"stock": 42,
 		"rating": 4.5,
+		"reviews": 27,
 		"img": "/images/harvest-moon-wonderful-life.jpg"
 	},
 	{
@@ -74,6 +80,7 @@
 		"category": "snes",
 		"stock": 29,
 		"rating": 4.7,
+		"reviews": 86,
 		"img": "/images/street-fighter-ii.jpg"
 	},
 	{
@@ -85,6 +92,7 @@
 		"category": "snes",
 		"stock": 1,
 		"rating": 4.8,
+		"reviews": 59,
 		"img": "/images/illusion-time.jpg"
 	},
 	{
@@ -96,6 +104,7 @@
 		"category": "game-boy",
 		"stock": 101,
 		"rating": 4.1,
+		"reviews": 271,
 		"img": "/images/tetris.jpg"
 	}
 ]

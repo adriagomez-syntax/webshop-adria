@@ -4,7 +4,7 @@ export default function ProductPrice({ price, offer, stock }) {
 			{offer > 0 &&
 				<span className="text-xs line-through opacity-40">{ offer.toLocaleString("de-De") } €</span>
 			}
-			<p className={(stock > 0 && "text-accent-1") + " font-secondary font-bold tracking-widest"}>{ price.toLocaleString("de-De") } €</p>
+			<p className={(stock > 0 && "text-primary") + " font-secondary font-bold tracking-widest"}>{ price.toLocaleString("de-De") } €</p>
 		</div>
 	)
 }

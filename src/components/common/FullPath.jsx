@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router";
 import links from "../../assets/data/links.json" with { type: "json" }
+import products from "../../assets/data/products.json" with { type: "json" }
 
 export default function FullPath() {
 	
@@ -15,7 +16,10 @@ export default function FullPath() {
 				<span key={index} className="flex gap-1">
 					{" / "}
 					{(index === path.length - 1)
-						? <p className="text-accent-3">{ links.find(link => link.path === "/" + page)?.name }</p>
+						? <p className="text-accent-3">{ 
+							links.find(link => link.path === "/" + page)?.name
+							|| products.find(product => product.id === page)?.name 
+						}</p>
 						: <Link to={"/" + page} className="hover:underline">
 							{ links.find(link => link.path === "/" + page)?.name }
 						</Link>

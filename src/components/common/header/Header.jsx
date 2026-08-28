@@ -9,10 +9,10 @@ import NavLinkList from "./navbar/NavLinkList";
 
 export default function Header() {
 	
-	const [openNavMenu, setOpenNavMenu] = useState(true)
+	const [openNavMenu, setOpenNavMenu] = useState(false)
 	
 	return (
-		<header className="min-h-10 p-4 border-b border-text/20">
+		<header className="fixed min-w-full min-h-10 p-4 z-50 bg-background border-b border-background-card">
 			<div className="flex justify-between items-center md:mx-40">
 				<Logo />
 				<Navbar className="hidden md:flex" classList="flex gap-2" />
