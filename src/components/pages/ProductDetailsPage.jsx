@@ -5,7 +5,7 @@ import products from "../../assets/data/products.json" with { type: "json" }
 import DetailsHero from "../details/hero/DetailsHero";
 import DetailsDescription from "../details/DetailsDescription";
 
-export default function ProductDetailsPage() {
+export default function ProductDetailsPage({ addToCart }) {
 
 	const { id } = useParams();
 	const product = products.find(product => product.id === id);
@@ -16,7 +16,7 @@ export default function ProductDetailsPage() {
 	
 	return (
 		<Main className="flex flex-col gap-12">
-			<DetailsHero {...product} />
+			<DetailsHero addToCart={ addToCart } {...product} />
 			<DetailsDescription {...product} />
 		</Main>
 	)

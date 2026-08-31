@@ -8,7 +8,7 @@ import Section from "../../common/Section";
 import ProductStock from "../../shop/product/ProductStock";
 import DetailsButtons from "./DetailsButtons";
 
-export default function DetailsHero({ img, name, category, offer, price, rating, reviews, stock }) {
+export default function DetailsHero({ addToCart, id, img, name, category, offer, price, rating, reviews, stock }) {
 	return (
 		<Section className="flex flex-col gap-4">
 			<FullPath />
@@ -34,7 +34,7 @@ export default function DetailsHero({ img, name, category, offer, price, rating,
 							<h2 className="font-secondary font-bold tracking-widest text-3xl text-primary">{ price } €</h2>
 						</div>
 						<ProductStock stock={ stock } />
-						<DetailsButtons name={ name } stock={ stock } />
+						<DetailsButtons addToCart={ addToCart } id={ id } stock={ stock } />
 					</div>
 					<div className="flex justify-between items-center">
 						<div className="flex gap-1 items-center text-2xs">

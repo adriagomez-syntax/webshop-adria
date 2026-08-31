@@ -8,11 +8,7 @@ import ProductPrice from "./ProductPrice";
 import ProductStock from "./ProductStock";
 import { FaCartPlus } from "react-icons/fa";
 
-export default function ProductCard({ id, name, price, offer, category, rating, stock, img }) {
-	
-	function AddToCart() {
-		console.log(`${name} zum Warenkorb hinzugefügt`);
-	}
+export default function ProductCard({ addToCart, id, name, price, offer, category, rating, stock, img }) {
 	
 	return (
 		<Card className={(stock <= 0 && "opacity-40") + " gap-6"}>
@@ -24,7 +20,7 @@ export default function ProductCard({ id, name, price, offer, category, rating, 
 					<ProductStock stock={ stock } />
 					<div className="flex justify-between items-center">
 						<ProductPrice price={ price } offer={ offer } stock={ stock } />
-						<ButtonFilled onClick={AddToCart} size={ButtonLittle} disabled={stock <= 0}>
+						<ButtonFilled onClick={() => addToCart(id, 1) } size={ ButtonLittle } disabled={ stock <= 0 }>
 							<FaCartPlus />
 						</ButtonFilled>
 					</div>
