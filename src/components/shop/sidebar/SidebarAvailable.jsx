@@ -12,20 +12,18 @@ export default function SidebarAvailable({ mobile = true }) {
 	}
 
 	return (
-		<SidebarInputGroup label="Verfügbarkeit" className="text-accent-2">
+		<SidebarInputGroup label="Verfügbarkeit" className="text-primary">
 			<div className="flex gap-2">
 				<InputRadio id={`filterStockAll${mobile ? "Mobile" : "Laptop"}`} label="Alle" name={`stock${mobile ? "Mobile" : "Laptop"}`} value="0"
 					checked={ !inStock }
 					onChange={ handleChange }
 				/>
-				{/*<label htmlFor={`filterStockAll${mobile ? "Mobile" : "Laptop"}`} className="text-xs">Alle</label>*/}
 			</div>
 			<div className="flex gap-2">
 				<InputRadio id={`filterStockOnly${mobile ? "Mobile" : "Laptop"}`} label="Auf Lager" name={`stock${mobile ? "Mobile" : "Laptop"}`} value="1"
 					checked={ inStock }
 					onChange={ handleChange }
 				/>
-				{/*<label htmlFor={`filterStockOnly${mobile ? "Mobile" : "Laptop"}`} className="text-xs">Auf Lager</label>*/}
 			</div>
 		</SidebarInputGroup>
 	)

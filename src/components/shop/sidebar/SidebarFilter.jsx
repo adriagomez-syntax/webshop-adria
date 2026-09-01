@@ -4,14 +4,19 @@ import ButtonOutline from "../../common/button/ButtonOutline";
 import SidebarAvailable from "./SidebarAvailable";
 import SidebarPrice from "./SidebarPrice";
 import ProductContext from "../../../contexts/ProductContext";
+import SidebarCategory from "./SidebarCategory";
 
-export default function SidebarFilter({ mobile, resetValues }) {
+export default function SidebarFilter({ mobile }) {
 	
-	const { defaultValues, minPrice, maxPrice, inStock } = useContext(ProductContext)
+	const { defaultValues, resetValues, categories, sortSel, minPrice, maxPrice, inStock } = useContext(ProductContext)
 	
 	function checkDefaultValues() {
 
-		if (inStock !== defaultValues.inStock
+		const catSorted = categories.sort();
+
+		if (!defaultValues.category.every((val, i) => val === catSorted[i])
+			|| sortSel !== defaultValues.sort
+			|| inStock !== defaultValues.inStock
 			|| minPrice !== defaultValues.price.min
 			|| maxPrice !== defaultValues.price.max
 		) { return false }
@@ -22,6 +27,7 @@ export default function SidebarFilter({ mobile, resetValues }) {
 	return (
 		<>
 			<div className="flex flex-col gap-6">
+				<SidebarCategory />
 				<SidebarAvailable mobile={ mobile } />
 				<SidebarPrice />
 			</div>

@@ -8,9 +8,9 @@ export default function SidebarMobile({ children }) {
 	const [open, setOpen] = useState(false)
 
 	return (
-		<div>
+		<div className="md:hidden">
 			<ButtonOutline 
-				className="md:hidden flex gap-2 items-center text-text"
+				className="flex gap-2 items-center text-text"
 				onClick={ () => setOpen(true) }
 			>
 				<FaFilter />

@@ -7,26 +7,32 @@ import ProductContext from "../../../contexts/ProductContext";
 
 export default function FilterCategory() {
 	
-	const { category, setCategory } = useContext(ProductContext)
-	
-	const categoryList = ["Alle"].concat(Object.keys(categoryObject))
+	const { categories, setCategory } = useContext(ProductContext)
 
-	function getCategoryName(category)
-	{
-		if (category === "Alle") { return category }
+	function handleClick(elem) {
+		if (categories.includes(elem))
+		{
+			setCategory(
+				categories.filter((category) => category !== elem)
+			)
 
-		return categoryObject[category]
+			return;
+		}
+		
+		setCategory(
+			[...categories, elem]
+		)
 	}
 
 	return (
-		<div className="flex gap-3 overflow-x-scroll text-nowrap">
-			{categoryList.map(elem => (
-				category === elem
-					? <ButtonFilled key={ elem } size={ ButtonLittle }>
-						{getCategoryName(elem)}
+		<div className="hidden md:flex md:gap-3 md:overflow-x-scroll md:text-nowrap">
+			{Object.keys(categoryObject).map(elem => (
+				categories.includes(elem)
+					? <ButtonFilled key={ elem } size={ ButtonLittle } onClick={() => handleClick(elem)}>
+						{categoryObject[elem]}
 					</ButtonFilled>
-					: <ButtonOutline key={ elem } size={ ButtonLittle } onClick={() => setCategory(elem)} >
-						{getCategoryName(elem)}
+					: <ButtonOutline key={ elem } size={ ButtonLittle } onClick={() => handleClick(elem)} >
+						{categoryObject[elem]}
 					</ButtonOutline>
 			))}
 		</div>

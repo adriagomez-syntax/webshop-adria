@@ -10,6 +10,7 @@ import ProductContext from "../../contexts/ProductContext"
 export default function ShopPage() {
 	
 	const defaultValues = {
+		category: Object.keys(categoryName).sort(),
 		sort: 1,
 		price: { min: 0, max: 1000 },
 		inStock: false
@@ -24,11 +25,19 @@ export default function ShopPage() {
 	]
 
 	const [searchValue, setSearch] = useState("")
-	const [category, setCategory] = useState("Alle")
-	const [sortSel, setSort] = useState(1);
+	const [categories, setCategory] = useState(defaultValues.category)
+	const [sortSel, setSort] = useState(defaultValues.sort);
 	const [inStock, setInStock] = useState(defaultValues.inStock)
 	const [minPrice, setMinPrice] = useState(defaultValues.price.min)
 	const [maxPrice, setMaxPrice] = useState(defaultValues.price.max)
+
+	function resetValues() {
+		setCategory(defaultValues.category)
+		setSort(defaultValues.sort)
+		setInStock(defaultValues.inStock)
+		setMinPrice(defaultValues.price.min)
+		setMaxPrice(defaultValues.price.max)
+	}
 
 	const filteredList =  products.filter( product => {
 			
@@ -36,7 +45,7 @@ export default function ShopPage() {
 		const categoryLower = categoryName[product.category].toLowerCase()
 
 		// Filter
-		return (category === "Alle" || product.category === category)
+		return categories.includes(product.category)
 		&& (!inStock || product.stock > 0)
 		&& (product.price >= minPrice)
 		&& (product.price <= maxPrice)
@@ -47,12 +56,12 @@ export default function ShopPage() {
 		|| categoryLower.includes(lowerSearch))
 	})
 
-	const sortFunc = sortList.find(func => func.id === sortSel)?.func || ((a, b) => {console.log("Default Sort!"); return a > b});
+	const sortFunc = sortList.find(func => func.id === sortSel)?.func || ((a, b) => { return b.rating - a.rating });
 	const orderedList = filteredList.sort(sortFunc)
 
 	return (
 		<Main className="flex flex-col gap-4">
-			<ProductContext value={{ orderedList, defaultValues, searchValue, setSearch, sortList, sortSel, setSort, category, setCategory, minPrice, setMinPrice, maxPrice, setMaxPrice, inStock, setInStock }}>
+			<ProductContext value={{ orderedList, defaultValues, resetValues, searchValue, setSearch, sortList, sortSel, setSort, categories, setCategory, minPrice, setMinPrice, maxPrice, setMaxPrice, inStock, setInStock }}>
 				<ShopHeroSection />
 				<FilterSection />
 				<ProductSection />
