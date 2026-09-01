@@ -41,6 +41,10 @@ export default function App() {
 		console.log(cartItems);
 	}
 	
+	function emptyCart() {
+		setCartItems([])
+	}
+
 	return (
 		<div className="bg-background font-primary font-light text-text/50 text-sm flex flex-col min-h-screen gap-4">
 			<Header quantity={ cartCount } />
@@ -48,7 +52,7 @@ export default function App() {
 				<Route path="" element={ <HomePage /> } />
 				<Route path="/product" element={ <ShopPage addToCart={ addToCart } /> } />
 				<Route path="/product/:id" element={ <ProductDetailsPage addToCart={ addToCart } /> } />
-				<Route path="/kasse" element={ <CheckoutPage /> } />
+				<Route path="/kasse" element={ <CheckoutPage emptyCart={ emptyCart } /> } />
 				<Route path="/about" element={ <AboutPage /> } />
 
 				<Route path="/*" element={ <Error404Page /> } />
