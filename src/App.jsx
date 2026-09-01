@@ -12,8 +12,18 @@ import { useEffect, useState } from "react"
 export default function App() {
 	
 	const [cartItems, setCartItems] = useState(() => {
-		const saved = localStorage.getItem("cartItems");
-		return saved ? JSON.parse(saved) : []
+		let saved = localStorage.getItem("cartItems");
+		if (!saved) { return [] }
+		
+		try {
+			saved = JSON.parse(saved)
+		}
+		catch(e) { 
+			console.error(e)
+			saved = []
+		}
+
+		return saved
 	})
 	const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
 
