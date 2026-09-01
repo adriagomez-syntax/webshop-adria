@@ -7,17 +7,17 @@ import { useState } from "react";
 import SideMenu from "../SideMenu";
 import NavLinkList from "./navbar/NavLinkList";
 
-export default function Header() {
+export default function Header({ quantity }) {
 	
 	const [openNavMenu, setOpenNavMenu] = useState(false)
-	
+
 	return (
 		<header className="fixed min-w-full min-h-10 p-4 z-50 bg-background border-b border-background-card">
 			<div className="flex justify-between items-center md:mx-40">
 				<Logo />
 				<Navbar className="hidden md:flex" classList="flex gap-2" />
 				<div className="flex gap-4">
-					<User />
+					<User quantity={ quantity } />
 					<Button className="text-text md:hidden hover:text-accent-3" onClick={ () => setOpenNavMenu(true) }>
 						<FiMenu />
 					</Button>

@@ -1,4 +1,5 @@
-import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import UserCart from "../../components/common/header/user/UserCart";
 
 export const userButtons = [
 	{
@@ -8,7 +9,7 @@ export const userButtons = [
 	},
 	{
 		id: "cart",
-		icon: FaShoppingCart,
+		icon: UserCart,
 		path: "/kasse"
 	},
 ]

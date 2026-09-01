@@ -12,6 +12,7 @@ import { useState } from "react"
 export default function App() {
 	
 	const [cartItems, setCartItems] = useState([])
+	const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
 
 	function addToCart(id, quantity) {
 		const productFind = cartItems.find((item) => item.id === id)
@@ -25,7 +26,7 @@ export default function App() {
 	
 	return (
 		<div className="bg-background font-primary font-light text-text/50 text-sm flex flex-col min-h-screen gap-4">
-			<Header />
+			<Header quantity={ cartCount } />
 			<Routes>
 				<Route path="" element={ <HomePage /> } />
 				<Route path="/product" element={ <ShopPage addToCart={ addToCart } /> } />
