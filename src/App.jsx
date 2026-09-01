@@ -7,12 +7,19 @@ import Error404Page from "./components/pages/Error404Page"
 import ProductDetailsPage from "./components/pages/ProductDetailsPage"
 import CheckoutPage from "./components/pages/CheckouPage"
 import AboutPage from "./components/pages/AboutPage"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function App() {
 	
-	const [cartItems, setCartItems] = useState([])
+	const [cartItems, setCartItems] = useState(() => {
+		const saved = localStorage.getItem("cartItems");
+		return saved ? JSON.parse(saved) : []
+	})
 	const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
+
+	useEffect(() => {
+		localStorage.setItem("cartItems", JSON.stringify(cartItems))
+	}, [cartItems])
 
 	function addToCart(id, quantity) {
 		const productFind = cartItems.find((item) => item.id === id)
