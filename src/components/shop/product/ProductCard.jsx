@@ -7,9 +7,13 @@ import ProductTitle from "./ProductTitle";
 import ProductPrice from "./ProductPrice";
 import ProductStock from "./ProductStock";
 import { FaCartPlus } from "react-icons/fa";
+import { useContext } from "react";
+import CartContext from "../../../contexts/CartContext";
 
-export default function ProductCard({ addToCart, id, name, price, offer, category, rating, stock, img }) {
+export default function ProductCard({ id, name, price, offer, category, rating, stock, img }) {
 	
+	const { addToCart } = useContext(CartContext)
+
 	return (
 		<Card className={(stock <= 0 && "opacity-40") + " gap-6"}>
 			<ProductImage id={ id } name={ name } stock={ stock } img={ img } />

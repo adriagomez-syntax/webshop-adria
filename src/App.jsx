@@ -8,6 +8,7 @@ import ProductDetailsPage from "./components/pages/ProductDetailsPage"
 import CheckoutPage from "./components/pages/CheckouPage"
 import AboutPage from "./components/pages/AboutPage"
 import { useEffect, useState } from "react"
+import CartContext from "./contexts/CartContext"
 
 export default function App() {
 	
@@ -25,7 +26,6 @@ export default function App() {
 
 		return saved
 	})
-	const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
 
 	useEffect(() => {
 		localStorage.setItem("cartItems", JSON.stringify(cartItems))
@@ -47,17 +47,19 @@ export default function App() {
 
 	return (
 		<div className="bg-background font-primary font-light text-text/50 text-sm flex flex-col min-h-screen gap-4">
-			<Header quantity={ cartCount } />
-			<Routes>
-				<Route path="" element={ <HomePage /> } />
-				<Route path="/product" element={ <ShopPage addToCart={ addToCart } /> } />
-				<Route path="/product/:id" element={ <ProductDetailsPage addToCart={ addToCart } /> } />
-				<Route path="/kasse" element={ <CheckoutPage emptyCart={ emptyCart } /> } />
-				<Route path="/about" element={ <AboutPage /> } />
+			<CartContext value={{ cartItems, addToCart, emptyCart }}>
+				<Header />
+				<Routes>
+					<Route path="" element={ <HomePage /> } />
+					<Route path="/product" element={ <ShopPage /> } />
+					<Route path="/product/:id" element={ <ProductDetailsPage /> } />
+					<Route path="/kasse" element={ <CheckoutPage emptyCart={ emptyCart } /> } />
+					<Route path="/about" element={ <AboutPage /> } />
 
-				<Route path="/*" element={ <Error404Page /> } />
-			</Routes>
-			<Footer />
+					<Route path="/*" element={ <Error404Page /> } />
+				</Routes>
+				<Footer />
+			</CartContext>
 		</div>
 	)
 }

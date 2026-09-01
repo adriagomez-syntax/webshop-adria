@@ -6,7 +6,7 @@ import products from "../../assets/data/products.json" with { type: "json" }
 import categoryName from "../../assets/data/categoryName.json" with { type: "json" }
 import FilterSection from "../shop/filter/FilterSection";
 
-export default function ShopPage({ addToCart }) {
+export default function ShopPage() {
 	
 	const defaultValues = {
 		price: { min: 0, max: 1000 },
@@ -51,7 +51,7 @@ export default function ShopPage({ addToCart }) {
 		<Main className="flex flex-col gap-4">
 			<ShopHeroSection resultNum={ orderedList.length } />
 			<FilterSection searchValue={ searchValue } setSearch={ setSearch } sortList={ sortList } sortFunc={ sortFunc } setSort={ setSort } category={ category } setCategory={ setCategory } />
-			<ProductSection addToCart={ addToCart } products={ orderedList } defaultValues={ defaultValues } minPrice={ minPrice } setMinPrice={ setMinPrice } maxPrice={ maxPrice } setMaxPrice={ setMaxPrice } inStock={ inStock } setInStock={ setInStock } />
+			<ProductSection products={ orderedList } defaultValues={ defaultValues } minPrice={ minPrice } setMinPrice={ setMinPrice } maxPrice={ maxPrice } setMaxPrice={ setMaxPrice } inStock={ inStock } setInStock={ setInStock } />
 		</Main>
 	)
 }

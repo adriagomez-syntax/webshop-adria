@@ -7,7 +7,7 @@ import { useState } from "react";
 import SideMenu from "../SideMenu";
 import NavLinkList from "./navbar/NavLinkList";
 
-export default function Header({ quantity }) {
+export default function Header() {
 	
 	const [openNavMenu, setOpenNavMenu] = useState(false)
 
@@ -17,7 +17,7 @@ export default function Header({ quantity }) {
 				<Logo />
 				<Navbar className="hidden md:flex" classList="flex gap-2" />
 				<div className="flex gap-4">
-					<User quantity={ quantity } />
+					<User />
 					<Button className="text-text md:hidden hover:text-accent-3" onClick={ () => setOpenNavMenu(true) }>
 						<FiMenu />
 					</Button>
