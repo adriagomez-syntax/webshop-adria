@@ -54,8 +54,8 @@ export default function ShopPage() {
 		<Main className="flex flex-col gap-4">
 			<ProductContext value={{ orderedList, defaultValues, searchValue, setSearch, sortList, sortSel, setSort, category, setCategory, minPrice, setMinPrice, maxPrice, setMaxPrice, inStock, setInStock }}>
 				<ShopHeroSection />
-				<FilterSection searchValue={ searchValue } setSearch={ setSearch } sortList={ sortList } sortFunc={ sortFunc } setSort={ setSort } category={ category } setCategory={ setCategory } />
-				<ProductSection products={ orderedList } defaultValues={ defaultValues } minPrice={ minPrice } setMinPrice={ setMinPrice } maxPrice={ maxPrice } setMaxPrice={ setMaxPrice } inStock={ inStock } setInStock={ setInStock } />
+				<FilterSection />
+				<ProductSection />
 			</ProductContext>
 		</Main>
 	)

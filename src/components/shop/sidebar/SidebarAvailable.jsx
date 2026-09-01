@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import InputRadio from "../../common/InputRadio";
 import SidebarInputGroup from "./SidebarInputGroup";
+import ProductContext from "../../../contexts/ProductContext";
 
-export default function SidebarAvailable({ inStock, setInStock, valueChanged, mobile = true }) {
+export default function SidebarAvailable({ mobile = true }) {
 	
+	const { inStock, setInStock } = useContext(ProductContext)
+
 	function handleChange(event) {
 		setInStock(Boolean(Number(event.target.value)))
-		valueChanged()
 	}
 
 	return (

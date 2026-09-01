@@ -1,28 +1,25 @@
-import { useState } from "react";
+import { useContext } from "react";
 import SidebarInputGroup from "./SidebarInputGroup"
+import ProductContext from "../../../contexts/ProductContext";
 
-export default function SidebarPrice({ maxPrice, minPrice, setMaxPrice, setMinPrice, valueChanged }) {
+export default function SidebarPrice() {
 	
-	const [minPercent, setMinPercent] = useState(0);
-	const [maxPercent, setMaxPercent] = useState(100);
+	const { maxPrice, minPrice, setMaxPrice, setMinPrice } = useContext(ProductContext) 
 
-	function handleMinPrice(event) {
+	const minPercent = Math.round((minPrice / 1000) * 100);
+	const maxPercent = Math.round((maxPrice / 1000) * 100);
+
+	function handleMinPrice(price) {
 		
-		let price = Number(event.target.value)
 		if (price >= maxPrice) { price = maxPrice - 1 }
 		
-		setMinPercent(Math.round((price / 1000) * 100))
 		setMinPrice(price)
-		valueChanged()
 	}
 
-	function handleMaxPrice(event) {
-		let price = Number(event.target.value)
+	function handleMaxPrice(price) {
 		if (price <= minPrice) { price = minPrice + 1 }
 		
-		setMaxPercent(Math.round((price / 1000) * 100))
 		setMaxPrice(price)
-		valueChanged()
 	}
 	
 	return (
@@ -33,7 +30,7 @@ export default function SidebarPrice({ maxPrice, minPrice, setMaxPrice, setMinPr
 					left: `${minPercent}%`,
 					width: `${maxPercent - minPercent}%`
 				}} />
-				<input type="range" min="0" max="1000" value={ minPrice } onChange={ handleMinPrice } 
+				<input type="range" min="0" max="1000" value={ minPrice } onChange={ (event) => handleMinPrice(Number(event.target.value)) } 
 					className="absolute w-full pointer-events-none appearance-none bg-transparent 
 					[&::-webkit-slider-thumb]:pointer-events-auto 
 					[&::-webkit-slider-thumb]:appearance-none 
@@ -50,7 +47,7 @@ export default function SidebarPrice({ maxPrice, minPrice, setMaxPrice, setMinPr
 					[&::-moz-range-thumb]:border-none
 					[&::-moz-range-thumb]:rounded-full"
 				/>
-				<input type="range" min="0" max="1000" value={ maxPrice } onChange={ handleMaxPrice } 
+				<input type="range" min="0" max="1000" value={ maxPrice } onChange={ (event) => handleMaxPrice(Number(event.target.value)) } 
 					className="absolute w-full pointer-events-none appearance-none bg-transparent 
 					[&::-webkit-slider-thumb]:pointer-events-auto 
 					[&::-webkit-slider-thumb]:appearance-none 

@@ -1,24 +1,12 @@
-import { useState } from "react"
+import { useContext } from "react"
 import SidebarMobile from "./SidebarMobile"
 import SidebarLaptop from "./SidebarLaptop"
 import SidebarFilter from "./SidebarFilter"
+import ProductContext from "../../../contexts/ProductContext"
 
-export default function SidebarSection({ defaultValues, minPrice, setMinPrice, maxPrice, setMaxPrice, inStock, setInStock }) {
+export default function SidebarSection() {
 
-	const [resetEnabled, setResetEnabled] = useState(false)
-
-	function checkValues() {
-		if (inStock !== defaultValues.inStock
-			|| minPrice !== defaultValues.price.min
-			|| maxPrice !== defaultValues.price.max
-		)
-		{
-			setResetEnabled(true)
-			return
-		}
-
-		setResetEnabled(false)
-	}
+	const { defaultValues, setMinPrice, setMaxPrice, setInStock } = useContext(ProductContext)
 
 	function resetValues() {
 		setInStock(defaultValues.inStock)
@@ -29,10 +17,10 @@ export default function SidebarSection({ defaultValues, minPrice, setMinPrice, m
 	return (
 		<div>
 			<SidebarMobile>
-				<SidebarFilter checkValues={ checkValues } resetEnabled={ resetEnabled } resetValues={ resetValues } inStock={ inStock } setInStock={ setInStock } minPrice={ minPrice } setMinPrice={ setMinPrice } maxPrice={ maxPrice } setMaxPrice={ setMaxPrice } />
+				<SidebarFilter resetValues={ resetValues } />
 			</SidebarMobile>
 			<SidebarLaptop>
-				<SidebarFilter mobile={ false } checkValues={ checkValues } resetEnabled={ resetEnabled } resetValues={ resetValues } inStock={ inStock } setInStock={ setInStock } minPrice={ minPrice } setMinPrice={ setMinPrice } maxPrice={ maxPrice } setMaxPrice={ setMaxPrice } />
+				<SidebarFilter mobile={ false } resetValues={ resetValues } />
 			</SidebarLaptop>
 		</div>
 	)
