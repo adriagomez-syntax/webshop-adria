@@ -2,8 +2,12 @@ import ButtonFilled from "../../common/button/ButtonFilled";
 import ButtonLittle from "../../common/button/ButtonLittle";
 import ButtonOutline from "../../common/button/ButtonOutline";
 import categoryObject from "../../../assets/data/categoryName.json" with { type: "json" }
+import { useContext } from "react";
+import ProductContext from "../../../contexts/ProductContext";
 
-export default function FilterCategory({ category, setCategory }) {
+export default function FilterCategory() {
+	
+	const { category, setCategory } = useContext(ProductContext)
 	
 	const categoryList = ["Alle"].concat(Object.keys(categoryObject))
 

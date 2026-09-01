@@ -3,13 +3,13 @@ import SearchBar from "./SearchBar";
 import FilterCategory from "./FilterCategory"
 import FilterSort from "./FilterSort";
 
-export default function FilterSection({ searchValue, setSearch, sortList, sortFunc, setSort, category, setCategory }) {
+export default function FilterSection() {
 	return (
 		<Section className="gap-4">
-			<SearchBar searchValue={ searchValue } setSearch={ setSearch } />
+			<SearchBar />
 			<div className="flex gap-4 justify-between">
-				<FilterCategory category={ category } setCategory={ setCategory } />
-				<FilterSort sortList={ sortList } sortFunc={ sortFunc } setSort={ setSort } />
+				<FilterCategory />
+				<FilterSort />
 			</div>
 		</Section>
 	)

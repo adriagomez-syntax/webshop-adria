@@ -10,6 +10,6 @@ export const userButtons = [
 	{
 		id: "cart",
 		icon: UserCart,
-		path: "/kasse"
+		path: "/cart"
 	},
 ]

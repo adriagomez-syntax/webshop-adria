@@ -2,10 +2,14 @@ import { FaSearch } from "react-icons/fa"
 import Input from "../../common/Input"
 import { FaX } from "react-icons/fa6";
 import Button from "../../common/button/Button";
+import { useContext } from "react";
+import ProductContext from "../../../contexts/ProductContext";
 
-export default function SearchBar({ searchValue, setSearch }) {
+export default function SearchBar() {
 
-	function clearSearch(){
+	const { searchValue, setSearch } = useContext(ProductContext)
+
+	function clearSearch() {
 		setSearch("");
 	}
 

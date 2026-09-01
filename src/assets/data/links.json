@@ -15,8 +15,13 @@
 		"isNav": true
 	},
 	{
+		"name": "Cart",
+		"path": "/cart",
+		"isNav": false
+	},
+	{
 		"name": "Checkout",
-		"path": "/kasse",
+		"path": "/checkout",
 		"isNav": false
 	}
 ]

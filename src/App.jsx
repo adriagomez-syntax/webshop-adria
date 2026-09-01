@@ -9,6 +9,7 @@ import CheckoutPage from "./components/pages/CheckouPage"
 import AboutPage from "./components/pages/AboutPage"
 import { useEffect, useState } from "react"
 import CartContext from "./contexts/CartContext"
+import CartPage from "./components/pages/CartPage"
 
 export default function App() {
 	
@@ -53,7 +54,8 @@ export default function App() {
 					<Route path="" element={ <HomePage /> } />
 					<Route path="/product" element={ <ShopPage /> } />
 					<Route path="/product/:id" element={ <ProductDetailsPage /> } />
-					<Route path="/kasse" element={ <CheckoutPage emptyCart={ emptyCart } /> } />
+					<Route path="/cart" element={ <CartPage /> } />
+					<Route path="/checkout" element={ <CheckoutPage /> } />
 					<Route path="/about" element={ <AboutPage /> } />
 
 					<Route path="/*" element={ <Error404Page /> } />

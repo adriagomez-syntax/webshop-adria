@@ -1,5 +1,5 @@
-import ButtonFilled from "../../common/button/ButtonFilled";
 import ButtonLittle from "../../common/button/ButtonLittle";
+import ButtonOutline from "../../common/button/ButtonOutline";
 import Input from "../../common/Input";
 
 export default function DetailsQuantity({ quantity, setQuantity, stock }) {
@@ -32,13 +32,13 @@ export default function DetailsQuantity({ quantity, setQuantity, stock }) {
 	return (
 		<div className="flex gap-4 items-center">
 			<div className="flex">
-				<ButtonFilled onClick={decrement} size={ButtonLittle} rounded="rounded-l-md" disabled={ quantity <= 1 }>-</ButtonFilled>
-				<div className="flex gap-1 items-center px-2 py-1 border border-background-card">
+				<ButtonOutline onClick={decrement} size={ButtonLittle} color="border-secondary bg-accent-2/20 text-accent-2" rounded="rounded-l-md" disabled={ quantity <= 1 }>-</ButtonOutline>
+				<div className="flex gap-1 items-center px-2 py-1 border-y border-secondary">
 					<span className="text-xs">Menge:</span>
 					<Input type="number" min="1" max={ stock } value={ quantity } className="w-fit text-center" border=""
 						onChange={event => handleOnChange(event)} />
 				</div>
-				<ButtonFilled onClick={increment} size={ButtonLittle} rounded="rounded-r-md" disabled={ quantity >= stock }>+</ButtonFilled>
+				<ButtonOutline onClick={increment} size={ButtonLittle} rounded="rounded-r-md" color="border-secondary bg-secondary/20 text-secondary" disabled={ quantity >= stock }>+</ButtonOutline>
 			</div>
 		</div>
 	)
