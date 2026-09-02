@@ -1,7 +1,7 @@
 import CartFooter from "../cart/CartFooter";
 import CartHeroSection from "../cart/CartHeroSection";
 import CartListSection from "../cart/CartListSection";
-import CartTotal from "../cart/CartTotal";
+import CartTotal from "../cart/total/CartTotal";
 import Main from "../common/Main";
 import Section from "../common/Section";
 
