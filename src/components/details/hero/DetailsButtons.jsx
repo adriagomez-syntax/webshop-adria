@@ -1,6 +1,6 @@
 import { FaCartPlus } from "react-icons/fa";
 import ButtonFilled from "../../common/button/ButtonFilled";
-import DetailsQuantity from "./DetailsQuantity";
+import QuantitySelector from "../../common/QuantitySelector";
 import { useContext, useState } from "react";
 import CartContext from "../../../contexts/CartContext";
 
@@ -12,7 +12,7 @@ export default function DetailsButtons({ id, stock }) {
 	return (
 		<div className="flex flex-col gap-4">
 			{ stock > 0 &&
-				<DetailsQuantity stock={ stock } quantity={ quantity } setQuantity={ setQuantity } />
+				<QuantitySelector stock={ stock } quantity={ quantity } setQuantity={ setQuantity } />
 			}
 			<ButtonFilled onClick={ () => addToCart(id, quantity) } className="flex gap-2 items-center justify-center max-w-full overflow-hidden" disabled={ stock < 1 }>
 				<FaCartPlus className="shrink-0" />

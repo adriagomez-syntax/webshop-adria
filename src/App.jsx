@@ -39,7 +39,6 @@ export default function App() {
 
 		if (productFind) { setCartItems([...cartItems]) }
 		else { setCartItems([...cartItems, productObj]) }
-		console.log(cartItems);
 	}
 	
 	function emptyCart() {
@@ -48,7 +47,7 @@ export default function App() {
 
 	return (
 		<div className="bg-background font-primary font-light text-text/50 text-sm flex flex-col min-h-screen gap-4">
-			<CartContext value={{ cartItems, addToCart, emptyCart }}>
+			<CartContext value={{ cartItems, addToCart, emptyCart, setCartItems }}>
 				<Header />
 				<Routes>
 					<Route path="" element={ <HomePage /> } />
