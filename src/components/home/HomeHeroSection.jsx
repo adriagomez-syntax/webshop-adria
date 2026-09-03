@@ -7,11 +7,11 @@ import { Link } from "react-router";
 
 export default function HomeHeroSection() {
 	return (
-		<Section className="md:max-h-[40vh] gap-4 md:flex-row">
+		<Section className="mb-8 md:max-h-[40vh] gap-4 md:flex-row">
 			<div className="flex flex-col gap-4 md:w-1/2">
-				<div className="flex gap-2 text-primary font-secondary tracking-widest text-2xs">
+				<div className="flex gap-2 text-primary font-secondary tracking-widest items-center text-2xs">
 					<FaCheck />
-					<p className="uppercase">100% Originale & Geprüft</p>
+					<h3 className="uppercase">100% Originale & Geprüft</h3>
 				</div>
 				<TitelHighlight>
 					{"Deine Zeitmaschine für "}

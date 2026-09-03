@@ -18,9 +18,9 @@ export default function HomeBestseller() {
 		
 	return (
 		<Section className="mt-8 gap-4">
-			<div className="flex gap-2 text-accent-2 text-2xs">
+			<div className="flex gap-2 text-accent-2 font-secondary tracking-widest items-center text-2xs">
 				<FaTrophy />
-				<p className="font-secondary tracking-widest uppercase">Schnell zugreifen, bevor alles vergriffen ist!</p>
+				<h3 className="font-secondary tracking-widest uppercase">Schnell zugreifen, bevor alles vergriffen ist!</h3>
 			</div>
 			<h2 className="font-secondary tracking-widest font-bold text-text text-xl">Bestseller</h2>
 			<ScrollList list={ listBestseller } itemComponent={ ProductCard } />

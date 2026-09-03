@@ -15,7 +15,7 @@ export default function ProductCard({ id, name, price, offer, category, rating, 
 	const { addToCart } = useContext(CartContext)
 
 	return (
-		<Card className={(stock <= 0 && "opacity-40") + " gap-6 h-95 md:h-100"}>
+		<Card className={(stock <= 0 && "opacity-40") + " gap-6 h-95 md:h-110"}>
 			<ProductImage id={ id } name={ name } stock={ stock } img={ img } />
 			<div className="flex-1 flex flex-col justify-between gap-4 px-4 pb-4">
 				<ProductCategoryRating category={ category } rating={ rating } disabled={ stock <= 0 } />
