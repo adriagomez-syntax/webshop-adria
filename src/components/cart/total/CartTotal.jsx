@@ -2,7 +2,7 @@ import { useContext } from "react"
 import CartContext from "../../../contexts/CartContext"
 import products from "../../../assets/data/products.json" with { type: "json" }
 import CartResumePrice from "./CartResumePrice"
-import CartCheckout from "./Cartcheckout"
+import CartCheckout from "./CartCheckout"
 import CartSecurity from "./CartSecurity"
 
 export default function CartTotal() {
