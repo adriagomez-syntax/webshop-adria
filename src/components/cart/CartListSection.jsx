@@ -25,24 +25,22 @@ export default function CartListSection() {
 	}
 
 	return (
-		<div className="flex min-h-20 md:w-2/3">
-			<div className="min-w-full flex-1 flex flex-col gap-4">
-				<ul className="flex flex-col gap-3">
-					{ cartItems.map((item) => {
+		<div className="flex-1 flex flex-col min-h-20 gap-4 md:w-2/3">
+			<ul className="flex flex-col gap-3">
+				{ cartItems.map((item) => {
 
-						const product = products.find(elem => elem.id === item.id)
+					const product = products.find(elem => elem.id === item.id)
 
-						return (
-							<CartListRow key={ item.id } product={ product } quantity={ item.quantity } refreshList={ refreshList } />
-						)
-					})}
-				</ul>
-				<div className="flex justify-end">
-					<ButtonFilled className="flex gap-2 items-center" onClick={ emptyCart }>
-						<FaTrash />
-						<p>Leer Warenkorb</p>
-					</ButtonFilled>
-				</div>
+					return (
+						<CartListRow key={ item.id } product={ product } quantity={ item.quantity } refreshList={ refreshList } />
+					)
+				})}
+			</ul>
+			<div className="flex justify-end">
+				<ButtonFilled className="flex gap-2 items-center" onClick={ emptyCart }>
+					<FaTrash />
+					<p>Leer Warenkorb</p>
+				</ButtonFilled>
 			</div>
 		</div>
 	)
