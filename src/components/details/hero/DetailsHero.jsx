@@ -29,7 +29,7 @@ export default function DetailsHero({ id, img, name, category, offer, price, rat
 						<TitelHighlight>{ name }</TitelHighlight>
 						<div className="flex gap-2 items-end">
 							{ offer > 0 &&
-								<span className="text-xs line-through">{ offer.toLocaleString("de-De") } €</span>
+								<span className="text-xs line-through">{ offer.toLocaleString("de-De", { style: "currency", currency: "EUR" }) }</span>
 							}
 							<h2 className="font-secondary font-bold tracking-widest text-3xl text-primary">{ price } €</h2>
 						</div>

@@ -17,7 +17,7 @@ export default function FullPath() {
 					{" / "}
 					{(index === path.length - 1)
 						? <p className="text-accent-3">{ 
-							links.find(link => link.path === "/" + page)?.name
+							links.find(link => link.path.includes("/" + page))?.name
 							|| products.find(product => product.id === page)?.name 
 						}</p>
 						: <Link to={"/" + page} className="hover:underline">

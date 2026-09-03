@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import InputRadio from "../../common/InputRadio";
+import InputRadio from "../../common/input/InputRadio";
 import SidebarInputGroup from "./SidebarInputGroup";
 import ProductContext from "../../../contexts/ProductContext";
 

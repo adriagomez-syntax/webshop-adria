@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa"
-import Input from "../../common/Input"
+import Input from "../../common/input/Input"
 import { FaX } from "react-icons/fa6";
 import Button from "../../common/button/Button";
 import { useContext } from "react";

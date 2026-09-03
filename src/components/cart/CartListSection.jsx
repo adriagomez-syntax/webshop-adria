@@ -25,7 +25,7 @@ export default function CartListSection() {
 	}
 
 	return (
-		<div className={`${cartItems.length <= 0 && "justify-center items-center"} flex min-h-20 flex-1`}>
+		<div className={`${cartItems.length <= 0 && "justify-center items-center"} flex min-h-20 md:w-2/3`}>
 			{ cartItems.length > 0 
 				? <div className="min-w-full flex-1 flex flex-col gap-4">
 					<ul className="flex flex-col gap-3">

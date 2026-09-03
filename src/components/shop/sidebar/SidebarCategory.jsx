@@ -2,7 +2,7 @@ import { useContext } from "react";
 import SidebarInputGroup from "./SidebarInputGroup";
 import ProductContext from "../../../contexts/ProductContext";
 import categoryObject from "../../../assets/data/categoryName.json" with { type: "json" }
-import InputCheck from "../../common/InputCheck";
+import InputCheck from "../../common/input/InputCheck";
 
 export default function SidebarCategory() {
 	

@@ -21,7 +21,7 @@
 	},
 	{
 		"name": "Checkout",
-		"path": "/checkout",
+		"path": "/cart/checkout",
 		"isNav": false
 	}
 ]

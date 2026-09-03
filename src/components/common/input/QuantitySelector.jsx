@@ -1,5 +1,5 @@
-import ButtonLittle from "./button/ButtonLittle";
-import ButtonOutline from "./button/ButtonOutline";
+import ButtonLittle from "../button/ButtonLittle";
+import ButtonOutline from "../button/ButtonOutline";
 import Input from "./Input";
 
 export default function DetailsQuantity({ quantity, setQuantity, stock, min = 1, label = true, product = null, callback = null }) {

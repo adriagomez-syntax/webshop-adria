@@ -1,5 +1,5 @@
 import ImgHighlight from "../common/ImgHighlight";
-import QuantitySelector from "../common/QuantitySelector";
+import QuantitySelector from "../common/input/QuantitySelector";
 import categoryName from "../../assets/data/categoryName.json" with { type: "json" }
 import { useState } from "react";
 import { Link } from "react-router";
@@ -28,7 +28,7 @@ export default function CartListRow({ product, quantity, refreshList }) {
 				<div className="flex gap-2 justify-end items-center">
 					<span className="hidden text-xs md:flex">Zwischensumme: </span>
 					<p className="text-primary font-bold text-lg">
-						{ totalPrice.toLocaleString("de-De") }€
+						{ totalPrice.toLocaleString("de-De",{ style: "currency", currency: "EUR" }) }
 					</p>
 				</div>
 			</div>

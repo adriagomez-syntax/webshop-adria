@@ -7,7 +7,7 @@ export default function CartResumePrice({ totalSum }) {
 			<h2 className="text-text font-bold text-sm">Zusammenfassung</h2>
 			<div className="flex gap-3 justify-between items-center">
 				<p>Zwischensumme</p>
-				<p className="text-text">{ totalSum.toLocaleString("de-De") }€</p>
+				<p className="text-text">{ totalSum.toLocaleString("de-De", { style: "currency", currency: "EUR" }) }</p>
 			</div>
 			<div className="flex gap-3 justify-between">
 				<p>Versandkosten</p>

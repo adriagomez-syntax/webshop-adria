@@ -54,7 +54,7 @@ export default function App() {
 					<Route path="/product" element={ <ShopPage /> } />
 					<Route path="/product/:id" element={ <ProductDetailsPage /> } />
 					<Route path="/cart" element={ <CartPage /> } />
-					<Route path="/checkout" element={ <CheckoutPage /> } />
+					<Route path="/cart/checkout" element={ <CheckoutPage /> } />
 					<Route path="/about" element={ <AboutPage /> } />
 
 					<Route path="/*" element={ <Error404Page /> } />

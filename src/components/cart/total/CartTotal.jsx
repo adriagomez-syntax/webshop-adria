@@ -14,7 +14,7 @@ export default function CartTotal() {
 	, 0)
 	
 	return (
-		<div className="p-4 bg-background-mid border-background-card rounded-md">
+		<div className="md:w-1/3 p-4 bg-background-mid border-background-card rounded-md">
 			<CartResumePrice totalSum={totalSum} />
 			<div className="flex flex-col gap-4">
 				<CartCheckout totalSum={ totalSum } />

@@ -1,6 +1,6 @@
 import { FaCartPlus } from "react-icons/fa";
 import ButtonFilled from "../../common/button/ButtonFilled";
-import QuantitySelector from "../../common/QuantitySelector";
+import QuantitySelector from "../../common/input/QuantitySelector";
 import { useContext, useState } from "react";
 import CartContext from "../../../contexts/CartContext";
 
