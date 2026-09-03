@@ -5,7 +5,7 @@ import TitelHighlight from "../../common/TitleHighlight";
 import categoryName from "../../../assets/data/categoryName.json" with { type: "json" }
 import FullPath from "../../common/FullPath";
 import Section from "../../common/Section";
-import ProductStock from "../../shop/product/ProductStock";
+import ProductStock from "../../common/product/ProductStock";
 import DetailsButtons from "./DetailsButtons";
 
 export default function DetailsHero({ id, img, name, category, offer, price, rating, reviews, stock }) {

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import ProductCard from "./ProductCard"
+import ProductCard from "../../common/product/ProductCard"
 import ProductContext from "../../../contexts/ProductContext"
 //import ProductListPagination from "./ProductListPagination"
 

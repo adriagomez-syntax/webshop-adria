@@ -15,6 +15,11 @@
 		"isNav": true
 	},
 	{
+		"name": "Kontakt",
+		"path": "/contact",
+		"isNav": true
+	},
+	{
 		"name": "Warenkorb",
 		"path": "/cart",
 		"isNav": false

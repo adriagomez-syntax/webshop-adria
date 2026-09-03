@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"name": "Dennis W.",
+		"img": "/community/dennis-w.jpg",
+		"rating": 5,
+		"productId": "super-mario-kart",
+		"comment": "Super Mario Kart in OVP kam exakt so an wie beschrieben! Die Verpackung war extrem sicher gegen Beschädigungen gefeit. Gerne wieder!"
+	},
+	{
+		"id": 2,
+		"name": "Sarah K.",
+		"img": "/community/sarah-k.jpg",
+		"rating": 5,
+		"productId": "super-mario-land",
+		"comment": "Endlich ein Shop, bei dem die Platinen echt gereinigt und getestet sind. Der Zustand von Super Mario Land übertraf meine kühnsten Erwartungen."
+	},
+	{
+		"id": 3,
+		"name": "Lenna L.",
+		"img": "/community/lenna-l.jpg",
+		"rating": 4,
+		"productId": "street-fighter-ii",
+		"comment": "Schöner Shop mit toller Auswahl an Retro-Spielen. Mein Spiel lief perfekt und wurde schnell geliefert. Ein Stern Abzug nur wegen kleiner Gebrauchsspuren, aber das ist bei Retro normal."
+	},
+	{
+		"id": 4,
+		"name": "Markus L.",
+		"img": "/community/markus-l.jpg",
+		"rating": 5,
+		"productId": "fire-emblem-path-radiance",
+		"comment": "Fantastischer Laden für Retro-Fans! Das Spiel kam in einem super Zustand an und funktioniert einwandfrei. Man merkt sofort, dass hier mit Liebe gearbeitet wird. Werde definitiv wieder bestellen!"
+	},
+	{
+		"id": 5,
+		"name": "Tobias R.",
+		"img": "/community/tobias-r.jpg",
+		"rating": 5,
+		"productId": "harvest-moon-wonderful-life",
+		"comment": "Einfach großartig! Das Spiel war wie neu und sogar die Originalhülle war dabei. Der Kundenservice war auch sehr freundlich. Absolut empfehlenswert!"
+	},
+	{
+		"id": 6,
+		"name": "Anna K.",
+		"img": "/community/anna-k.jpg",
+		"rating": 4,
+		"productId": "pokemon-gelbe",
+		"comment": "Sehr zufrieden mit meinem Kauf. Das Spiel wurde schnell geliefert und lief ohne Probleme. Verpackung war ordentlich. Ein kleiner Minuspunkt für den Preis, aber insgesamt top!"
+	}
+]

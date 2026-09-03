@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router"
+import { useEffect, useState } from "react"
 import Header from "./components/common/header/Header"
 import Footer from "./components/common/footer/Footer"
 import HomePage from "./components/pages/HomePage"
@@ -7,9 +8,9 @@ import Error404Page from "./components/pages/Error404Page"
 import ProductDetailsPage from "./components/pages/ProductDetailsPage"
 import CheckoutPage from "./components/pages/CheckouPage"
 import AboutPage from "./components/pages/AboutPage"
-import { useEffect, useState } from "react"
 import CartContext from "./contexts/CartContext"
 import CartPage from "./components/pages/CartPage"
+import ContactPage from "./components/pages/ContactPage"
 
 export default function App() {
 	
@@ -56,6 +57,7 @@ export default function App() {
 					<Route path="/cart" element={ <CartPage /> } />
 					<Route path="/cart/checkout" element={ <CheckoutPage /> } />
 					<Route path="/about" element={ <AboutPage /> } />
+					<Route path="/contact" element={ <ContactPage /> } />
 
 					<Route path="/*" element={ <Error404Page /> } />
 				</Routes>

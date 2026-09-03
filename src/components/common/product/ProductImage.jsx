@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import ImgHighlight from "../../common/ImgHighlight";
+import ImgHighlight from "../ImgHighlight";
 
 export default function ProductImage({ id, name, stock, img }) {
 	return (
