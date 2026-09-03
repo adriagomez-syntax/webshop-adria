@@ -8,7 +8,7 @@ export default function ProductList() {
 	const { orderedList } = useContext(ProductContext)
 
 	return (
-		<div className="flex-1 flex flex-col gap-12 min-h-[10vh]">
+		<div className="flex-1 flex flex-col gap-12 min-h-[10vh] md:w-2/3">
 			{ orderedList.length > 0
 				? <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
 					{orderedList.map(product => (
