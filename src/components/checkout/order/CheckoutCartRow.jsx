@@ -1,6 +1,7 @@
 import { Link } from "react-router"
 import ImgHighlight from "../../common/ImgHighlight"
 import categoryName from "../../../assets/data/categoryName.json" with { type: "json" }
+import LinkAnim from "../../common/LinkAnim"
 
 export default function CheckoutCartRow({ quantity, id, name, img, category, price }) {
 	
@@ -15,8 +16,8 @@ export default function CheckoutCartRow({ quantity, id, name, img, category, pri
 				<div className="overflow-hidden">
 					<p className="flex gap-1">
 						<span>{ quantity }x</span>
-						<Link to={`/product/${id}`} className="flex-1 min-w-0 text-text truncate font-bold hover:underline">
-							<span>{ name }</span>
+						<Link to={`/product/${id}`} className="flex-1 min-w-0 text-text truncate font-bold">
+							<LinkAnim>{ name }</LinkAnim>
 						</Link>
 					</p>
 					<p>{ categoryName[category] }</p>

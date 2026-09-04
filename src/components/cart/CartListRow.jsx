@@ -3,6 +3,7 @@ import QuantitySelector from "../common/input/QuantitySelector";
 import categoryName from "../../assets/data/categoryName.json" with { type: "json" }
 import { useState } from "react";
 import { Link } from "react-router";
+import LinkAnim from "../common/LinkAnim";
 
 export default function CartListRow({ product, quantity, refreshList }) {
 	
@@ -17,7 +18,7 @@ export default function CartListRow({ product, quantity, refreshList }) {
 				</Link>
 				<div className="min-w-0 max-w-35 md:max-w-100 flex flex-col gap-2 justify-center">
 					<Link to={`/product/${product.id}`}>
-						<p className="max-w-fit text-text font-bold truncate hover:underline">{ product.name }</p>
+						<LinkAnim className="max-w-fit text-text font-bold truncate">{ product.name }</LinkAnim>
 					</Link>
 					<p>{ categoryName[product.category] }</p>
 					<QuantitySelector quantity={ currentQuantity } setQuantity={ setQuantity } stock={ product.stock } min={ 0 } label={ false } product={ product } callback={ refreshList }  />

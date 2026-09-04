@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
 import links from "../../assets/data/links.json" with { type: "json" }
 import products from "../../assets/data/products.json" with { type: "json" }
+import LinkAnim from "./LinkAnim";
 
 export default function FullPath() {
 	
@@ -9,8 +10,10 @@ export default function FullPath() {
 	
 	return (
 		<div className="flex gap-1 text-2xs md:text-sm">
-			<Link to="/" className="hover:underline">
-				PixelVault
+			<Link to="/">
+				<LinkAnim>
+					PixelVault
+				</LinkAnim>
 			</Link>
 			{path.map((page, index) => (
 				<span key={index} className="flex gap-1">
@@ -20,8 +23,10 @@ export default function FullPath() {
 							links.find(link => link.path.includes("/" + page))?.name
 							|| products.find(product => product.id === page)?.name 
 						}</p>
-						: <Link to={"/" + page} className="hover:underline">
-							{ links.find(link => link.path === "/" + page)?.name }
+						: <Link to={"/" + page}>
+							<LinkAnim>
+								{ links.find(link => link.path === "/" + page)?.name }
+							</LinkAnim>
 						</Link>
 					}
 				</span>

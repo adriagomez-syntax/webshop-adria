@@ -1,6 +1,7 @@
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 import products from "../../../assets/data/products.json" with { type: "json" }
+import LinkAnim from "../../common/LinkAnim";
 
 export default function HomeCommunity({ productId, img, name, rating, comment }) {
 	
@@ -13,8 +14,8 @@ export default function HomeCommunity({ productId, img, name, rating, comment })
 					<img src={ img } className="rounded-full object-cover aspect-square w-10" alt={ name } />
 					<div className="w-full flex flex-col gap-1">
 						<p className="text-text font-bold">{ name }</p>
-						<Link to={`/product/${productId}`} className="w-full text-secondary hover:underline">
-							<p className="truncate">{ product.name }</p>
+						<Link to={`/product/${productId}`} className="w-full text-secondary">
+							<LinkAnim className="truncate">{ product.name }</LinkAnim>
 						</Link>
 					</div>
 				</div>

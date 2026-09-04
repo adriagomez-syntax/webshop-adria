@@ -25,6 +25,7 @@ export default function HomeNotification() {
 			return
 		}
 
+		setEmailError("")
 		console.log(`${emailRef.current.value} schon abonniert!`)
 	}
 
