@@ -35,11 +35,20 @@ export default function App() {
 
 	function addToCart(id, quantity) {
 		const productFind = cartItems.find((item) => item.id === id)
-		const productObj = productFind || { id: id, quantity: 0 }
-		productObj.quantity += quantity
 
-		if (productFind) { setCartItems([...cartItems]) }
-		else { setCartItems([...cartItems, productObj]) }
+		if (productFind) {
+			setCartItems(
+				cartItems.map((item) => {
+					item.id === id
+						? {...item, quantity: item.quantity + quantity }
+						: item
+				})
+			)
+		}
+		else
+		{
+			setCartItems([...cartItems, { id: id, quantity: quantity }])
+		}
 	}
 	
 	function emptyCart() {
